@@ -3,7 +3,6 @@
   <%= button_to "Connect a Twitter account", "/auth/twitter", data: { turbo: "false" }, class: "btn btn-primary" %>
 </div>
 
-
 <% @twitter_accounts.each do |twitter_account| %>
   <div class="d-flex align-items-center mb-4">
     <div class="mr-4">
@@ -11,7 +10,7 @@
       <%= link_to "@#{twitter_account.username}", "https://twitter.com/#{twitter_account.username}", target: :_blank %>
     </div>
 
-    <%= button_to "Disconnect", twitter_account, method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+    <%= button_to "Disconnect", twitter_account, method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-secondary" %>
   </div>
 <% end %>
 
